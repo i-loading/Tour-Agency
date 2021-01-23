@@ -511,7 +511,8 @@ html {
   line-height: 19px;
   color: #FFFFFF;
   padding: 10px 0;
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   border-radius: 4px;
 }
 
@@ -1052,10 +1053,6 @@ footer .policy div {
   flex: 1;
 }
 
-footer .policy img {
-  display: block;
-}
-
 footer .policy a {
   font-size: 12px;
   line-height: 15px;
@@ -1358,8 +1355,8 @@ footer .policy a {
     align-items: center;
   }
 
-  .header-nav .nav li {
-    margin-bottom: 20px;
+  .header-nav .nav li + li {
+    margin-top: 20px;
   }
 
   .main-desc .main-desc_left img {
@@ -1435,6 +1432,16 @@ footer .policy a {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .info-section .details-top .offer .date {
+    grid-template-columns: auto;
+  }
+
+  .reviews__item .quote {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .header-main .container .header-search input {
     width: 180px;
@@ -1461,14 +1468,31 @@ footer .policy a {
     padding: 13px 55px 30px;
   }
 
-  .reviews__item .quote {
-    padding: 0;
+  footer .policy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  footer .policy .links {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-desc_right > img {
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 380px) {
   .main-desc_right .room-info {
     padding: 12px;
+    max-width: 100%;
   }
 
   .news-section .newsletter_wrapper .email input {
